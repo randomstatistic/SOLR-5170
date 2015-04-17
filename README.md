@@ -11,10 +11,28 @@ This allows you to use the stock Solr distribution and treat this as a standard 
 
 Test infrastructure files were copied in from the solr source so that tests can be run.
 
+Author
+==========
+
+SOLR-5170 was originally authored by David Smiley, and all credit goes to him. 
+I've just been keeping the lights on. 
+
+
 Building
 ==========
 
    mvn package
    
+This might require Maven 3.x. 
+
 Then put the resulting jar someplace Solr can get it.   
     
+Solr versions
+=============
+    
+I've added tags for building this artifact for:
+ 
+  * solr_4.9.1
+  * solr_5.0.0
+  
+  

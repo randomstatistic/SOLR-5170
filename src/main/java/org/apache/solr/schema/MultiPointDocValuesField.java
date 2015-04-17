@@ -25,6 +25,7 @@ import org.apache.lucene.index.IndexableField;
 import org.apache.lucene.queries.function.ValueSource;
 import org.apache.lucene.search.SortField;
 import org.apache.lucene.spatial.MultiPointEncoding;
+import org.apache.lucene.uninverting.UninvertingReader;
 import org.apache.lucene.util.BytesRef;
 import org.apache.solr.common.SolrException;
 import org.apache.solr.common.SolrInputField;
@@ -91,6 +92,11 @@ public class MultiPointDocValuesField extends FieldType {
 
     BytesRef bytes = MultiPointEncoding.pointsToBytes(points);
     return new BinaryDocValuesField(field.getName(), bytes);
+  }
+
+  @Override
+  public UninvertingReader.Type getUninversionType(SchemaField sf) {
+    return null;
   }
 
   private Point pointFromValue(Object value) {

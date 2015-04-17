@@ -2,18 +2,18 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.apache.solr</groupId>
     <artifactId>SOLR-5170</artifactId>
-    <version>4.9.1-SNAPSHOT</version>
+    <version>5.0.0-SNAPSHOT</version>
     <dependencies>
         <dependency>
             <groupId>org.apache.solr</groupId>
             <artifactId>solr-test-framework</artifactId>
-            <version>4.9.1</version>
+            <version>5.0.0</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.apache.solr</groupId>
             <artifactId>solr-core</artifactId>
-            <version>4.9.1</version>
+            <version>5.0.0</version>
             <scope>provided</scope>
         </dependency>
         <dependency>

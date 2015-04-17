@@ -21,8 +21,8 @@ import com.spatial4j.core.context.SpatialContext;
 import com.spatial4j.core.exception.InvalidShapeException;
 import com.spatial4j.core.io.ParseUtils;
 import com.spatial4j.core.shape.Point;
-import org.apache.lucene.index.AtomicReader;
-import org.apache.lucene.index.AtomicReaderContext;
+import org.apache.lucene.index.LeafReader;
+import org.apache.lucene.index.LeafReaderContext;
 import org.apache.lucene.index.BinaryDocValues;
 import org.apache.lucene.queries.function.FunctionValues;
 import org.apache.lucene.queries.function.ValueSource;
@@ -101,8 +101,8 @@ public class MultiPointDistanceValueSourceParser extends ValueSourceParser {
     }
 
     @Override
-    public FunctionValues getValues(Map context, AtomicReaderContext readerContext) throws IOException {
-      final AtomicReader reader = readerContext.reader();
+    public FunctionValues getValues(Map context, LeafReaderContext readerContext) throws IOException {
+      final LeafReader reader = readerContext.reader();
       final BinaryDocValues docValues = reader.getBinaryDocValues(fieldName);
       if (docValues == null)
         return null;
