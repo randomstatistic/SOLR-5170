@@ -21,7 +21,7 @@ I've just been keeping the lights on.
 Building
 ==========
 
-   mvn package
+    mvn package
    
 This might require Maven 3.x. 
 
