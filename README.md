@@ -34,5 +34,6 @@ I've added tags for building this artifact for:
  
   * solr_4.9.1
   * solr_5.0.0
+  * solr_5.1.0
   
   
